@@ -18,11 +18,17 @@ urllib.request.install_opener(opener)
 blog_url_data=urllib.request.urlopen(news_url).read().decode("utf-8","ignore")
 
 # test_data='<a data-report-query="spm=3001.7377&amp;utm_medium=distribute.pc_feed_blog.none-task-blog-personrec_tag-5-149221523-null-null.nonecase&amp;depth_1-utm_source=distribute.pc_feed_blog.none-task-blog-personrec_tag-5-149221523-null-null.nonecase" data-report-click="{&quot;mod&quot;:&quot;&quot;,&quot;extra&quot;:{&quot;index&quot;:4,&quot;navType&quot;:&quot;&quot;},&quot;dist_request_id&quot;:&quot;1752219293760_92461&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;5&quot;,&quot;style&quot;:&quot;PIC_V2_11&quot;,&quot;strategy&quot;:&quot;personrec_tag&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/nmsoftklb/article/details/149221523&quot;,&quot;spm&quot;:&quot;3001.7377&quot;}" data-report-view="{&quot;mod&quot;:&quot;&quot;,&quot;extra&quot;:{&quot;index&quot;:4,&quot;navType&quot;:&quot;&quot;},&quot;dist_request_id&quot;:&quot;1752219293760_92461&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;5&quot;,&quot;style&quot;:&quot;PIC_V2_11&quot;,&quot;strategy&quot;:&quot;personrec_tag&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/nmsoftklb/article/details/149221523&quot;,&quot;spm&quot;:&quot;3001.7377&quot;}" target="_blank" href="https://blog.csdn.net/nmsoftklb/article/details/149221523" class="article-title word-1" data-v-36c9265b>Spring IoC 如何注入一些简单的值（比如配置文件里的字符串、数字）？</a>'
-# class="article-title word-1"
-pat = 'target="_blank" href="(.*?)" class="article-title word-1" data-v-36c9265b>'
-# pat = r'<a\b[^>]*?\s+href\s*=\s*["\'](.*?)["\'][^>]*?\s+class\s*=\s*["\']article-title word-1["\'][^>]*?>'
+#Mine
+#匹配不上
+# pat = 'target="_blank" href="(.*?)" class="article-title word-1" data-v-36c9265b>'
+pat = 'target="_blank" href="(.*?)" class="article-desc word-1" data-v-36c9265b>'
+#from doubao
+# pat = r'href="(https://blog\.csdn\.net/[^/]+/article/details/\d+)"[^>]+class="article-title word-1"'
+# pat = 'target="_blank" href="(.*?)" class="article-desc word-1" data-v-36c9265b>'
+#from deepseek
+# pat = r'<a[^>]*?class="article-title[^>]*?href="(.*?)"[^>]*>'
 find_blog_url= re.compile(pat).findall(blog_url_data)
-# print(blog_url_data)
+print(find_blog_url)
 
 # soup = BeautifulSoup(blog_url_data, "html.parser")
 # links = [a['href'] for a in soup.find_all('a', class_="article-title word-1")]
