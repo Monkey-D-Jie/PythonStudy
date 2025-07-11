@@ -7,5 +7,5 @@ class Count():
     def count(self):
         return self.a * self.b
     def Chen(a,b):
-    result = a * b
-    return f"{a}与{b}的乘积是: {result}"
+        result = a * b
+        return f"{a}与{b}的乘积是: {result}"

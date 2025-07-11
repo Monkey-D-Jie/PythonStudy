@@ -69,13 +69,13 @@ def combine_sheet_data(sheet_data,sheet_name,file_path):
 
 if __name__ == "__main__":
     # 读取excel文件
-    input_file_1 = "H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel.xlsx"
+    input_file_1 = "/demo/testFile/test-excel.xlsx"
     print(f"读取文件 '{input_file_1}'...")
     multi_excel_data_1 = read_excel(input_file_1)
-    input_file_2 = "H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel-2.xlsx"
+    input_file_2 = "/demo/testFile/test-excel-2.xlsx"
     print(f"读取文件 '{input_file_2}'...")
     multi_excel_data_2 = read_excel(input_file_2)
     multi_excel_data = {**multi_excel_data_1,**multi_excel_data_2}
     print(f"\n将数据写入文件 'test-excel-multi-course'....")
-    output_file = "H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel-multi-output-course.xlsx"
+    output_file = "/demo/testFile/test-excel-multi-output-course.xlsx"
     combine_sheet_data(multi_excel_data,"合并数据-course",output_file)

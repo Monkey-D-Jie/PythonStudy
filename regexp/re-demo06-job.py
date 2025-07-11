@@ -29,7 +29,7 @@ try:
         names = [div.get_text(strip=True) for div in soup.select("div.name")]
         print("BeautifulSoup--->>>")
         # 打印的同时，写入到指定的文件中
-        fh=open("H://myIdeaWorkSpace//PythonStudy//demo//testFile//douban_publish.txt","w",encoding="utf-8")
+        fh=open("/testFile//douban_publish.txt", "w", encoding="utf-8")
         for name in names:
             print(name)
             fh.write(name+"\n")

@@ -108,7 +108,7 @@ def write_excel(file_path,sheet_data,sheet_name="Sheet1",headers=None,single_she
 
 if __name__ == "__main__":
     #读取excel文件
-    input_file="H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel.xlsx"
+    input_file= "/demo/testFile/test-excel.xlsx"
     print(f"读取文件 '{input_file}'...")
     single_excel_data=read_excel_single_sheet(input_file)
     if(single_excel_data):
@@ -118,7 +118,7 @@ if __name__ == "__main__":
             print(f"行 {i+1}: {row}")
         #写入excel文件
         #单个sheet写入
-        output_file="H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel-single-output.xlsx"
+        output_file= "/testFile/test-excel-single-output.xlsx"
         # headers=["a","b","c"]
         print(f"\n将数据写入文件 'test-excel-single-output'....")
         write_excel(output_file,single_excel_data,"single-output",None,True)
@@ -126,6 +126,6 @@ if __name__ == "__main__":
 
     if (multi_excel_data):
         print(f"\n将数据写入文件 'test-excel-multi-output'....")
-        output_file = "H:/myIdeaWorkSpace/PythonStudy/demo/testFile/test-excel-multi-output.xlsx"
+        output_file = "/testFile/test-excel-multi-output.xlsx"
         # headers=["a","b","c"]
         write_excel(output_file, multi_excel_data, "multi-output", None, False)
