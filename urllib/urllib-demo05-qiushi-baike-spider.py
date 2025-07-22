@@ -91,6 +91,7 @@ def parse_save_data_by_soup(page_num: int):
         url = f"https://qiushidabaike.com/text_{j}.html"
         # 替换原有正则匹配部分
         cur_url_data = urllib.request.urlopen(url).read().decode("utf-8", "ignore")
+        # 指定解析模式
         soup = BeautifulSoup(cur_url_data, 'lxml')
         #target_dds = soup.find_all('dd', class_='content')
         contents = [dd.get_text('\n', strip=True)
