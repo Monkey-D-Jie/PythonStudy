@@ -218,6 +218,13 @@ for i in range(1,2):
         # urllib.request.urlretrieve(article_req_url,"H:\\myIdeaWorkSpace\\PythonStudy\\testFile\\wechat-article\\"+article_file_name)
         # print(article_file_name+"抓取完成！")
         # 随机延时（2-5秒）
+        '''
+        2025年8月8日11:03:54 更新
+        由于现在公众号已经对文章内容做了加密，
+        虽然能拿到标题，
+        但整体内容上还是有比较大的缺失。
+        故暂时只能作罢。
+        '''
         time.sleep(random.uniform(2, 5))
         if save_article_content(redirect_url,
                                 os.path.join(save_dir, article_file_name),
