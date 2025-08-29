@@ -34,7 +34,8 @@ class DBHandler:
                 poolclass=QueuePool,
                 pool_size=5,
                 max_overflow=10,
-                echo=True  # 调试时显示SQL语句
+                # True 调试时显示SQL语句
+                echo= False
             )
             print("✅ 数据库连接成功")
             DBHandler._Session = sessionmaker(bind=DBHandler._engine)

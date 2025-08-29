@@ -17,6 +17,7 @@ class BaidunewsDemoPipeline:
         # 调用公共模块方法
         news_field_map = {
             "classify": "classify",
+            "classify_name":"classify_name",
             "title": "title",
             "m_text": "m_text",
             "link": "link",
