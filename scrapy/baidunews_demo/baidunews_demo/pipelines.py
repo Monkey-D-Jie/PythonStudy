@@ -6,8 +6,22 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+# 使用相对导入
+# from ...common.db_utils import insert_data_to_table
+from common.db_utils import insert_data_to_table
 
 
 class BaidunewsDemoPipeline:
     def process_item(self, item, spider):
+        # print("当期获取到的item---->>>>>>>>",item)
+        # 调用公共模块方法
+        news_field_map = {
+            "classify": "classify",
+            "title": "title",
+            "m_text": "m_text",
+            "link": "link",
+            "content": "content",
+            "img_url": "img_url"
+        }
+        insert_data_to_table(item, "baidu_news",news_field_map)
         return item

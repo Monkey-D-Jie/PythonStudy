@@ -1,0 +1,5 @@
+setup.py
+baidunews_demo.egg-info/PKG-INFO
+baidunews_demo.egg-info/SOURCES.txt
+baidunews_demo.egg-info/dependency_links.txt
+baidunews_demo.egg-info/top_level.txt
